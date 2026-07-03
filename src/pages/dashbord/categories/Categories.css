@@ -1,0 +1,340 @@
+.NavBar-Categories {
+  background: var(--bg-secondary);
+  /* background: red; */
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  position: sticky;
+  top: 0;
+}
+
+.NavBar-Categories .text-NavBar {
+  margin: 0 20px 0 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.NavBar-Categories .button-NavBar {
+  margin: 0 0px 0 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.NavBar-Categories .button-NavBar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  color: white;
+  background: rgba(0, 128, 0, 0.685);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Start AllCategory */
+.AllCategory {
+  /* background: red; */
+  margin: 20px 0 0 0;
+  /* background: var(--section-bg);  */
+  height: 100vh;
+}
+
+.category-grid {
+  /* background: green; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 12px 0 0;
+}
+
+.category-card {
+  /* border: 1px solid black; */
+  width: 200px;
+  height: 250px;
+  background: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.category-card .card-img {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.category-card .card-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.category-card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-card .card-body h4 {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.category-card .card-body .card-actions {
+  /* background: red; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.category-card .card-body .card-actions button {
+  font-size: 20px;
+  padding: 2px 5px;
+  outline: none;
+  border: none;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.category-card .card-body .card-actions button:first-child {
+  color: #0056b3;
+}
+
+.category-card .card-body .card-actions button:last-child {
+  color: red;
+}
+/* End AllCategory */
+
+/* 000000000000000000000000000000000000 */
+/* Start Mdail Add */
+.category form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: end; */
+  gap: 20px;
+}
+
+.category form button {
+  cursor: pointer;
+}
+.category .box-input {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0px;
+  /* background: green; */
+  width: 100%;
+}
+
+.category .box-input input {
+  padding: 5px;
+  width: 95%;
+  border: none;
+  outline: none;
+  color: black;
+  background: var(--section-bg);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.form-group {
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+}
+
+.custom-upload-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  border: none;
+}
+
+.custom-upload-btn:hover {
+  background-color: #0056b3;
+}
+
+.Add-img {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+.upload-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-upload-btn.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  background-color: #6c757d;
+}
+
+.form-group .image-preview {
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group .image-preview img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form-group .image-preview button {
+  padding: 2px 15px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  background: rgba(255, 0, 0, 0.774);
+}
+
+.form-actions {
+  /* background: red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-actions button {
+  padding: 2px 15px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+}
+
+.form-actions button:first-child {
+  background: rgba(0, 128, 0, 0.685);
+}
+
+.form-actions button:last-child {
+  background: rgba(255, 0, 0, 0.774);
+}
+
+/* End Mdail Add */
+/* 000000000000000000000000000000000000 */
+
+/* زر الهمبرغر – يظهر فقط في الشاشات الصغيرة */
+.mobile-menu-btn {
+  display: none !important;
+}
+
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-alt, #333);
+  padding: 5px;
+}
+
+/* Start Media */
+
+@media (max-width: 1068px) {
+  .category-grid {
+    justify-content: center;
+    margin: 0 !important;
+  }
+}
+
+
+@media (max-width: 880px) {
+  .category-grid {
+    justify-content: center;
+    margin: 0;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    /* تأكد من أنه يظهر في أقصى اليمين بسبب flex-direction: row-reverse */
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    justify-content: center;
+    margin: 0 -10px 0px 0;
+    padding: 0 0 20px 0;
+    gap: 10px;
+    /* background: red; */
+  }
+  .category-card {
+    width: 45%;
+  }
+
+  .category-card .card-img img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width:466px) {
+  .text-NavBar h3 {
+    font-size: 14px;
+  }
+  .text-NavBar p {
+    font-size: 11px;
+    text-align: right;
+  }
+  .NavBar-Categories .button-NavBar button {
+    font-size: 11px;
+  }
+  .NavBar-Categories .button-NavBar .add-category-btn {
+    font-size: 10px !important;
+    padding: 2px 9px !important;
+  }
+}
+
+/* End Media */

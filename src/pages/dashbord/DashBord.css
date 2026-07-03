@@ -1,0 +1,145 @@
+h2 {
+  color: black;
+}
+
+.dashbord {
+  display: flex;
+}
+
+.dashbord .body-Dashbord {
+  background: var(--section-bg);
+  flex: 1;
+  height: 100vh;
+  overflow: scroll;
+}
+
+/* Start SidBar-Dashbord */
+.dashbord .SidBar-Dashbord {
+  width: 20%;
+  height: 100vh;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title-SidBar {
+  /* background: blue; */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-SidBar h3 {
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+.Url-SidBar {
+  /* background: green; */
+  margin: 20px 0 0 0;
+  /* width: 50%; */
+  display: flex;
+  /* justify-content: center; */
+}
+
+.Url-SidBar .box-Url {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background: blue; */
+  width: 100%;
+}
+
+.Url-SidBar .box-Url a {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 10px;
+  font-size: 19px;
+  margin: 0 0 0 25px;
+  /* width: 100%; */
+  outline: none;
+  color: var(--primary-alt);
+}
+
+.Url-Logout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.Url-Logout button {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 10px;
+  font-size: 19px;
+  margin: 20px 0 0 25px;
+  /* width: 100%; */
+  border: none;
+  color: var(--primary-alt);
+  cursor: pointer;
+}
+/* End SidBar-Dashbord */
+
+/* ************* */
+/* الستارة الجانبية */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* زر الهمبرغر يظهر فقط في الشاشات الصغيرة */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-alt, #333);
+}
+
+@media (max-width: 880px) {
+  .SidBar-Dashbord {
+    display: none !important; /* إخفاء الثابت */
+  }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* ************* */
+
+
+
