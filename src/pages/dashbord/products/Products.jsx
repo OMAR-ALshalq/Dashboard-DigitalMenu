@@ -287,7 +287,10 @@ export default function Products() {
                   <p className="product-category">
                     {getCategoryName(item.category)}
                   </p>
-                  <p className="product-price">{item.price}</p>
+                  <p className="product-price">
+                    <span>ل.س</span>
+                    <span> {item.price.toLocaleString()}</span>
+                  </p>
                   <div className="product-actions">
                     <button
                       className="edit-btn"

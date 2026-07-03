@@ -83,15 +83,27 @@ export default function Orders() {
     return () => clearInterval(interval);
   }, []);
 
+  // ✅ تعديل دالة تغيير الحالة ليشمل تحديث selectedOrder فوراً
   const handleStatusChange = async (id, newStatus) => {
     setStatusLoading((prev) => ({ ...prev, [id]: true }));
     try {
       await updateOrderStatus(id, newStatus);
+
+      // تحديث مصفوفة الطلبات العامة
       setOrders((prev) =>
         prev.map((order) =>
           order._id === id ? { ...order, status: newStatus } : order
         )
       );
+
+      // ✅ تحديث الطلب المعروض في المودال فوراً إذا كان هو نفسه
+      setSelectedOrder((prev) => {
+        if (prev && prev._id === id) {
+          return { ...prev, status: newStatus };
+        }
+        return prev;
+      });
+
       showSuccess("تم تحديث الحالة");
     } catch (err) {
       showError(err.response?.data?.message || "فشل التحديث");
@@ -208,7 +220,7 @@ export default function Orders() {
               <thead>
                 <tr>
                   <th>رقم الطلب</th>
-                  <th>العميل</th>
+                  <th>الزبون</th>
                   <th>النوع</th>
                   <th>الطاولة</th>
                   <th>الإجمالي</th>
@@ -283,7 +295,7 @@ export default function Orders() {
                   </div>
                   <div className="order-card-body">
                     <p>
-                      <strong>:العميل</strong>
+                      <strong>:الزبون</strong>
                       {order.customerName}
                     </p>
                     <p>
@@ -344,7 +356,7 @@ export default function Orders() {
             </div>
             <div className="order-info">
               <p>
-                <strong>العميل:</strong> {selectedOrder.customerName}
+                <strong>الزبون:</strong> {selectedOrder.customerName}
               </p>
               {selectedOrder.customerPhone && (
                 <p>
