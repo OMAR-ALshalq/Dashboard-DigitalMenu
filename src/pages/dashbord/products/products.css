@@ -187,6 +187,17 @@ img {
   gap: 10px;
 }
 
+
+
+.Products .from-input {
+  /* background: red; */
+  display: flex;
+  flex-direction: row-reverse;
+  /* justify-content: space-between; */
+  gap: 40px;
+  width: 100%;
+}
+
 form button {
   cursor: pointer;
 }
@@ -510,3 +521,68 @@ form button {
 }
 
 /* End Media */
+
+
+.add-size-btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.size-row {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.size-row input {
+  flex: 1;
+  padding: 5px 8px;
+  border: none;
+  width: 70px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.remove-size-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media (max-width:470px) {
+  .Products form {
+    height: 400px;
+    overflow-x: scroll;
+    /* background: #007bff; */
+  }
+  .Products .from-input {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 40px;
+    width: 80%;
+}
+.Products form .form-colum-one input,
+.Products form .form-colum-one  textarea{
+  width: 300px;
+}
+.size-row input {
+  flex: 1;
+  padding: 5px 8px;
+  border: none;
+  width: 110px;
+  border-bottom: 1px solid var(--primary-color);
+}
+}

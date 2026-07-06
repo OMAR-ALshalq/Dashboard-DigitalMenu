@@ -588,3 +588,11 @@
   font-size: 18px;
   margin-top: 30px;
 } */
+
+
+.selected-size-badge {
+  font-size: 13px;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-right: 5px;
+}
